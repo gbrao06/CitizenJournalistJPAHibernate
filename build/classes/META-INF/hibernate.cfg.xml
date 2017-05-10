@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://pmisdbinstance.ch6clahscorz.ap-southeast-1.rds.amazonaws.com:3306/world</property>
+        <property name="hibernate.connection.username">pmisdbmaster</property>
+        <property name="connection.password">Newton01</property>
+        <property name="connection.pool_size">1</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+	
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        
+		<!-- mappings for annotated classes -->
+        
+		<mapping class="com.shareki.model.hybernate.entities.City"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.Cityneighbour"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.Country"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.Countrylanguage"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.CountrylanguagePK"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.Sharekicomment"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.Sharekinew"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.Sharekiuser"></mapping>
+		<mapping class="com.shareki.model.hybernate.entities.State"></mapping>
+	    
+		
+        </session-factory>
+    
+</hibernate-configuration>
+
